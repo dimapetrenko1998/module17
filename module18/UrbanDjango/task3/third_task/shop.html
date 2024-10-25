@@ -1,0 +1,13 @@
+{% extends "third_task/base.html" %}
+
+{% block title %}Магазин{% endblock %}
+
+{% block content %}
+<h1>Магазин</h1>
+<ul>
+    {% for key, value in items.items %}
+        <li>{{ value }} <button>Купить</button></li>
+    {% endfor %}
+</ul>
+<a href="{% url 'home' %}"><button>На главную</button></a>
+{% endblock %}
